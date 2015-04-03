@@ -10,6 +10,7 @@ public class SampleTest {
 
     public static void main(String a[]) throws Exception {
         new SampleTest().solveProblem();
+
     }
 
     private void solveProblem() {
@@ -21,15 +22,16 @@ public class SampleTest {
             BufferedReader brin = new BufferedReader(fr);
             String line;
             while ((line = brin.readLine()) != null) {
-                HashSet<String> hset = new HashSet<String>(); // HashSet set = new Hashset();
+                HashSet<String> hset = new HashSet<String>();
                 String[] splittedString1 = line.split("\\s");
-                int x = 0;
-                String mapVal = splittedString1[x];
-                String mapKey = splittedString1[x + 1];
+                int lineIndex = 0;
+                String mapVal = splittedString1[lineIndex];
+                String mapKey = splittedString1[lineIndex + 1];
                 hset.add(mapVal);
                 HashSet<String> hset1 = new HashSet<String>();
                 hset1 = b.compare(mapKey);
                 map.put(mapKey, hset1);
+
             }
             System.out.println(map);
             Random random = new Random();
@@ -51,9 +53,9 @@ public class SampleTest {
                 }
             }
             HashMap outHashMapToFile = new HashMap<String, String>();
-            outHashMapToFile = b.outHashMap;                         //writing to the output hashmap
+            outHashMapToFile = b.outHashMap;                                    //writing to the output hashmap
             System.out.println("no of wines sold =" + outHashMap.size());
-            fw.write("\n Count of Sold Wines: ," + outHashMap.size() + "\n");
+            fw.write("\n Count of Sold Wines: ," + outHashMap.size() + "\n");   //writing to file
             System.out.println("The OutHash map:" + outHashMap);
             Set mapSet = (Set) outHashMap.entrySet();
             Iterator mapIterator = mapSet.iterator();
@@ -86,9 +88,9 @@ public class SampleTest {
         String line2;
         while ((line2 = brin2.readLine()) != null) {
             String[] splittedString2 = line2.split("\\s");
-            int y = 0;
-            String mapVal1 = splittedString2[y];
-            String mapKey1 = splittedString2[y + 1];
+            int lineIndex = 0;
+            String mapVal1 = splittedString2[lineIndex];
+            String mapKey1 = splittedString2[lineIndex + 1];
             if (mapKey.equals(mapKey1))
                 hset.add(mapVal1);
 
